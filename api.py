@@ -65,7 +65,6 @@ class Book(Resource):
             book.read = args['read']
         db.session.add(book)
         db.session.commit()
-        print(book)
         return jsonify(book_schema.dump(book))
 
 
